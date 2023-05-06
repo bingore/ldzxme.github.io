@@ -2,211 +2,88 @@
 <html>
 
 <head>
-    <title>地址发布,污污的网站,视频网站你懂的,网站导航你懂的,免费入口,在线观看,在线播放,你懂的的网站</title>
+    <meta charset="utf-8">
+    <title>发布页</title>
     <meta http-equiv='content-language' content='zh-cn'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content='width=device-width, initial-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="keywords" content="地址发布,污污的网站,视频网站你懂的,网站导航你懂的,免费入口,在线观看,在线播放,你懂的的网站" />
-    <meta name="description" content="这里是你懂的污污的视频网站导航的地址发布免费入口,这里发布的网站地址可在线播放和在线观看你懂得的那种污污的视频" />
-    <meta name="msvalidate.01" content="56EBFDACD05F57201DBA6262015B625C" />
-    <meta name="google-site-verification" content="sg3KTWgNRXokVfyMP14nHQhV8UHszB2fVYl5iFDcXZc" />
+    <meta name="description" content="浏览器必备网址唯一发布页" />
     <style>
-        a{text-decoration: none;color: lightskyblue;}
-        .bj {
-            z-index: 9999;
-            background-color: rgba(0, 0, 0, .7);
-            height: 100%;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            background-image: url(static/images/beijing.png) !important;
-        }
-        .main{
-            max-width: 540px;
-            margin: auto;
-            height: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        .header{
-            width: 100%;
-            height: 100px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .header h1{
-            font-size: 24px;
-            color: #dd4a68;
-        }
-        .section1{
-            width: 80%;
-            background-color: rgba(255, 255, 255, .3);
-            border-radius: 10px;
-            box-sizing: border-box;
-            padding: 3px;
-            font-size: 13px;
-            color: #fff;
-            line-height: 1.5;
-        }
-        .section2{
-            margin-top: 20px;
-            width: 74%;
-            padding-bottom: 74%;
-            position : relative;
-        }
-        .section2 .grid-box{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            grid-gap:20px;
-            grid-auto-flow: row dense;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .grid-box div{
-            width: 100%;
-            height: 100%;
-            border-radius: 13px;
-            background-color: #dd4a68;
-        }
-        .footer{
-            margin-top: 20px;
-            color: #0096FF;
-        }
+        *{color: #FFFBEB}
+        body{background-color: #263159;}
+        #show{max-width: 520px;margin: auto;min-height: 100vh;box-sizing: border-box;padding: 20px;}
+        h1{font-size: 28px;}
+        #link{background-color: #495579;padding: 30px;position: relative;}
+        #link{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+        #link a{font-size: 15px;user-select: none;position: relative;}
+        #link button{position: absolute;top: 3px;left: calc(50% - 25px);border: none;border-radius: 5px;background-color: black;width: 50px;padding: 3px;display: none;font-size: 14px;}
+        .selected{background-color: #143F6B;}
     </style>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/zepto@1.2.0/dist/zepto.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 </head>
 <body>
-    <div class="bj" x-data="action()">
-        <div class="main">
-            <div class="header">
-                <h1>最新地址发布</h1>
-            </div>
-            <div class="section1">
-                这里是你懂的污污的视频网站导航的<strong>地址</strong>发布<strong>免费入口</strong>,这里发布的网站地址可在线播放和在线观看你懂得的那种污污的视频,请收藏<a href="/" title="你懂的的网站地址发布">此页</a>,回家不迷路！
-            </div>
-            <div class="section2">
-                <div class="grid-box">
-                    <div style="grid-column-start: span 3;display: flex;justify-content: center;align-items: center;color: #fff;background-color: #0096FF;font-size: 14px;" @click="redirect(schema+yj)">🔞地址：LDZX.ME</div>
-                    <div style="background-color: #EAE509;display: flex;justify-content: center;align-items: center;" class="btn" x-bind:data-clipboard-text="self" @click="showAlert('已复制最新地址到剪贴板')"><svg style="height: 56%;width:auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></div>
-                    <div style="grid-column-start: span 2;display: flex;justify-content: center;align-items: center;color: #fff;background-color: #F94C66;font-size: 14px;" @click="randRedicect()">🔵最新地址</div>
-                    <div style="grid-row-start: span 2;grid-column-start: span 2;display: flex;justify-content: center;align-items: center;position: relative;background-color: #EF5B0C;" @click="randPlay()">
-                        <svg style="width: 60%;height:auto;fill:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M188.3 147.1C195.8 142.8 205.1 142.1 212.5 147.5L356.5 235.5C363.6 239.9 368 247.6 368 256C368 264.4 363.6 272.1 356.5 276.5L212.5 364.5C205.1 369 195.8 369.2 188.3 364.9C180.7 360.7 176 352.7 176 344V167.1C176 159.3 180.7 151.3 188.3 147.1V147.1zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
-                        <span style="position: absolute;bottom:0;width:100%;display:block;font-size:13px;color:#fff;text-align: center;">随机播放</span>
-                    </div>
-                    <div style="grid-row-start: span 2;display: flex;justify-content: center;align-items: center;background-color: #FFA500;color:#354259;font-size: 14px;" @click="play('/static/audio/a.mp3','啊~~')"><span style="writing-mode:vertical-rl;">别点这里 🈲</span></div>
-                    <div @click="play('/static/audio/ikun.mp3','干嘛~~')" style="background-image: url(/static/images/ikun.png);background-size:100%"></div>
-                    <div style="grid-column-start: span 3;display: flex;justify-content: center;align-items: center;overflow: hidden;">
-                        <span style="display: flex;justify-content: center;align-items: center;width:50%;height:100%;background-color:#3CCF4E;color:#fff;font-size: 14px;" @click="randRedicect()">在线地址二</span>
-                        <span style="display: flex;justify-content: center;align-items: center;width:50%;height:100%;background-color:#A460ED;color:#fff;font-size: 14px;" @click="randRedicect()">在线地址三</span>
-                    </div>
-                </div>
-            </div>
-            <template x-if="open">
-                <div style="position: absolute;top:45%;width:100%;text-align: center;">
-                    <span style="display: inline-block;background-color: rgba(0, 0, 0, .7);border-radius: 10px;padding: 10px;color: #fff;" x-text="alertion"></span>
-                </div>
-            </template>
-            <div @click="showAlert('已复制最新地址到剪贴板')" class="btn footer" x-bind:data-clipboard-text="self">📢<span x-text="self"></span></div>
+    <div id="show">
+        <h1>地址发布</h1>
+        <div id="link">
+            <a id="linkhref">https://𝕬𝕶𝕴𝖁.net/?长按复制全部到浏览器粘贴打开免费看𝗔⋁</a>
+            <button id="copy" data-clipboard-text="https://𝕬𝕶𝕴𝖁.net/?长按复制全部到浏览器粘贴打开免费看𝗔⋁">复 制</button>
         </div>
+        <h2>观影教程</h2>
+        <ul>
+            <li>长按以上方框中文字选中，点击复制，然后粘贴到浏览器地址栏打开</li>
+            <li>部分浏览器（如360极速浏览器）不支持以上网址形式，建议使用Chrome或Edge浏览器打开</li>
+            <li>发布页地址：<a href="https://ldzxme.github.io">ldzxme.github.io</a></li>
+        </ul>
     </div>
     <script>
-        /**
-         * 随机生成字符串
-         * @param len 指定生成字符串长度
-         */
-        function getRandomString(len){
-            let _charStr = 'abacdefghjklmnopqrstuvwxyz',
-                min = 0, 
-                max = _charStr.length-1, 
-                _str = '';                    //定义随机字符串 变量
-            //判断是否指定长度，否则默认长度为15
-            len = len || 15;
-            //循环生成字符串
-            for(var i = 0, index; i < len; i++){
-                index = (function(randomIndexFunc, i){         
-                            return randomIndexFunc(min, max, i, randomIndexFunc);
-                        })(function(min, max, i, _self){
-                            let indexTemp = Math.floor(Math.random()*(max-min+1)+min),
-                                numStart = _charStr.length - 10;
-                            if(i==0&&indexTemp >=numStart){
-                                indexTemp = _self(min, max, i, _self);
-                            }
-                            return indexTemp ;
-                        }, i);
-                _str += _charStr[index];
-            }
-            return _str;
+        var timeOutEvent = 0;
+		$(function() {
+			$("#linkhref").on({
+				touchstart: function(e) {
+					timeOutEvent = setTimeout("selectElementText()", 500);
+					e.preventDefault();
+				},
+				touchmove: function() {
+					clearTimeout(timeOutEvent);
+					timeOutEvent = 0;
+				},
+				touchend: function() {
+					clearTimeout(timeOutEvent);
+					if (timeOutEvent != 0) {
+						console.log("这是点击，不是长按");
+					}
+					return false;
+				},
+                mousedown: function(e) {
+					timeOutEvent = setTimeout("selectElementText()", 500);
+					e.preventDefault();
+				},
+				mousemove: function() {
+					clearTimeout(timeOutEvent);
+					timeOutEvent = 0;
+				},
+				mouseup: function() {
+					clearTimeout(timeOutEvent);
+					if (timeOutEvent != 0) {
+						console.log("这是点击，不是长按");
+					}
+					return false;
+				},
+			})
+		});
+        function selectElementText() {
+			timeOutEvent = 0;
+            $('#linkhref').addClass('selected');
+            $('#copy').show();
         }
-        //生成从minNum到maxNum的随机数
-        function randomNum(minNum,maxNum){ 
-            switch(arguments.length){ 
-                case 1: 
-                    return parseInt(Math.random()*minNum+1,10); 
-                break; 
-                case 2: 
-                    return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
-                break; 
-                    default: 
-                        return 0; 
-                    break; 
-            } 
-        }
-        function action() {
-            return {
-                self: 'ldzxme.github.io',
-                open:false,
-                alertion: '',
-                ext: '.com',
-                schema: 'https://',
-                yj: 'ldzx.me',
-                domn: ['zipaijingpin','zonghetv','guochanren'],
-                play(source,text){
-                    var player = new Audio(source);
-                    player.play();
-                    this.showAlert(text);
-                },
-                redirect(url){
-                    location.href = url;
-                    this.showAlert('加载中...请稍后');
-                },
-                showAlert(title){
-                    let that = this;
-                    that.open = true;
-                    that.alertion = title;
-                    setTimeout(() =>{that.open = false},1300);
-                },
-                randRedicect(){
-                    location.href = this.schema+getRandomString(randomNum(2,4))+'.'+this.domn[randomNum(0,2)]+this.ext;
-                    this.showAlert('加载中...请稍后');
-                },
-                randPlay(){
-                    location.href = this.schema+getRandomString(randomNum(2,4))+'.'+this.domn[randomNum(0,2)]+this.ext+'/play/'+randomNum(20000,70000);
-                    this.showAlert('加载中...请稍后');
-                }
-            }
-        }
-        var clipboard = new ClipboardJS('.btn');
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RK8PWRD1Q"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-9RK8PWRD1Q');
+        var clipboard = new ClipboardJS('#copy');
+        clipboard.on('success', function(e) {
+            $('#linkhref').removeClass('selected');
+            $('#copy').hide();
+            alert('已复制，请在浏览器地址栏粘贴打开');
+            e.clearSelection();
+        });
     </script>
 </body>
 </html>
