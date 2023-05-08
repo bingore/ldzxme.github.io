@@ -38,6 +38,26 @@
     </div>
     <script>
         var timeOutEvent = 0;
+        function isMQQ(){
+            var _UA = window.navigator.userAgent;
+            if(/QQ\/\d/i.test(_UA)){
+                return true;
+            }
+            return false;
+        }
+        function isWechat(){
+            var _UA = window.navigator.userAgent;
+            if(/micromessenger/i.test(_UA.match(/MicroMessenger/i))) {
+                return true;
+            }
+            return false;
+        }
+        function jump(){
+            if(!isMQQ() && !isWechat()){
+                location.href = 'ht'+'tp:'+'//'+'𝕬𝕶'+'𝕴𝖁.'+'net/?长按复制全部到浏览器粘贴打开免费看𝗔⋁';
+                alert('正在打开');
+            }
+        }
 		$(function() {
 			$("#linkhref").on({
 				touchstart: function(e) {
@@ -51,7 +71,7 @@
 				touchend: function() {
 					clearTimeout(timeOutEvent);
 					if (timeOutEvent != 0) {
-						console.log("这是点击，不是长按");
+						jump();
 					}
 					return false;
 				},
@@ -66,7 +86,7 @@
 				mouseup: function() {
 					clearTimeout(timeOutEvent);
 					if (timeOutEvent != 0) {
-						console.log("这是点击，不是长按");
+						jump();
 					}
 					return false;
 				},
