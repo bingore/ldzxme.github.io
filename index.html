@@ -11,13 +11,15 @@
     <style>
         *{color: #FFFBEB}
         body{background-color: #263159;}
-        #show{max-width: 520px;margin: auto;min-height: 100vh;box-sizing: border-box;padding: 20px;}
+        #show{max-width: 520px;margin: auto;min-height: 100vh;box-sizing: border-box;padding: 20px;position: relative;}
         h1{font-size: 28px;}
         #link{background-color: #495579;padding: 30px;position: relative;}
         #link{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
         #link a{font-size: 15px;user-select: none;position: relative;}
         #link button{position: absolute;top: 3px;left: calc(50% - 25px);border: none;border-radius: 5px;background-color: black;width: 50px;padding: 3px;display: none;font-size: 14px;}
         .selected{background-color: #143F6B;}
+        #notice{position: fixed;top: 35vh;left: 0;justify-content: center;align-items: center;width:100%;display: none;}
+        #notice span{background-color: black; font-size: 14px;display: inline-block;padding: 10px;}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/zepto@1.2.0/dist/zepto.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
@@ -35,6 +37,7 @@
             <li>部分浏览器（如360极速浏览器）不支持以上网址形式，建议使用Chrome或Edge浏览器打开</li>
             <li>发布页地址：<a href="https://ldzxme.github.io">ldzxme.github.io</a></li>
         </ul>
+        <div id="notice"><span>正在打开</span></div>
     </div>
     <script>
         var timeOutEvent = 0;
@@ -55,7 +58,10 @@
         function jump(){
             if(!isMQQ() && !isWechat()){
                 location.href = 'ht'+'tp:'+'//'+'𝕬𝕶'+'𝕴𝖁.'+'net/?长按复制全部到浏览器粘贴打开免费看𝗔⋁';
-                alert('正在打开');
+                $('#notice').css('display','flex');
+                setTimeout(function(){
+                    $('#notice').css('display','none');
+                },2000);
             }
         }
 		$(function() {
