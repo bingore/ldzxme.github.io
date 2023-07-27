@@ -7,42 +7,84 @@
     <meta http-equiv='content-language' content='zh-cn'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content='width=device-width, initial-scale=1.0, user-scalable=0' name='viewport' />
-    <link rel='canonical' href='https://github.com/ldzxme/ldzxme.github.io' />
     <style>
-        *{color: #FFFBEB}
-        body{background-color: #263159;}
-        #show{max-width: 520px;margin: auto;min-height: 100vh;box-sizing: border-box;padding: 20px;position: relative;}
-        h1{font-size: 28px;}
-        #link{background-color: #495579;padding: 30px;position: relative;}
-        #link{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-        #link a{font-size: 15px;user-select: none;position: relative;text-decoration: underline;cursor: pointer;}
-        #link button{position: absolute;top: 3px;left: calc(50% - 25px);border: none;border-radius: 5px;background-color: black;width: 50px;padding: 3px;display: none;font-size: 14px;}
-        .selected{background-color: #143F6B;}
-        #notice{position: fixed;top: 35vh;left: 0;justify-content: center;align-items: center;width:100%;display: none;}
-        #notice span{background-color: black; font-size: 14px;display: inline-block;padding: 10px;}
+        *{padding: 0;margin: 0;text-align: center;}
+        h1 {
+            line-height: 60px;
+            font-size: 23px;
+            color: #fff;
+            background: #390;
+        }
+        .top {
+    padding: 18px 0;
+    line-height: 38px;
+    background: #ffd;
+}
+.top div {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.top i {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #222;
+    padding-right: 7px;
+}
+.top b {
+    font-size: 22px;
+    color: #f22;
+    text-align: left;
+}
+.notice {
+    padding-top: 24px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f22;
+}
+.main {
+    padding: 20px 0;
+    color: #333;
+}
+.main div {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: flex-end;
+}
+.main span {
+    font-size: 17px;
+    line-height: 29px;
+}
+.main a {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 8px;
+    color: #390;
+    text-decoration: none;
+}
     </style>
     <script src="https://cdn.bootcdn.net/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id:"K4HgQeO7MQZWApPK",ck:"K4HgQeO7MQZWApPK"})</script>
 </head>
 <body>
     <div id="show">
-        <h1>🌎地址</h1>
-        <div id="link">
-            <a id="linkhref">https://yjrk.cc/?长按复制全部到浏览器粘贴打开免费看🌼</a>
-            <button id="copy" data-clipboard-text="https://yjrk.cc/?长按复制全部到浏览器粘贴打开免费看🌼">复 制</button>
+        <h1>最新地址</h1>
+        <div class="top">
+            <div>
+                <i>地址发布</i><b>ldzxme.github.io</b>
+            </div>
         </div>
-        <h2>教程</h2>
-        <ul>
-            <li>长按以上方框中文字选中，点击复制，然后粘贴到浏览器地址栏打开</li>
-            <li>部分浏览器（如360极速浏览器）不支持以上网址形式，建议使用Chrome或Edge浏览器打开</li>
-            <li>地址：<a href="https://ldzxme.github.io">ldzxme.github.io</a></li>
-        </ul>
-        <div id="notice"><span>正在打开</span></div>
+        <div class="notice">为防止中国浏览器拦截本站<br>建议用Chrome或Edge浏览器<br>打不开时可尝试切换手机网络</div>
+        <div class="main">
+            <div><span>地址一</span><a href="https://www.jingpindyy.com" target="_blank">douyinqqc.com</a></div>
+            <div><span>地址二</span><a href="https://www.douyinqqc.com" target="_blank">douyinqqc.com</a></div>
+            <div><span>地址三</span><a href="https://www.yjrk.cc" target="_blank">yjrk.cc</a></div>
+        </div>
     </div>
     <script>
-        var timeOutEvent = 0;
         function isMQQ(){
             var _UA = window.navigator.userAgent;
             if(/QQ\/\d/i.test(_UA)){
@@ -57,61 +99,11 @@
             }
             return false;
         }
-        function jump(){
-            if(!isMQQ() && !isWechat()){
-                location.href = 'ht'+'tps:'+'//'+'yj'+'rk.'+'cc/?长按复制全部到浏览器粘贴打开免费看🌼';
-                $('#notice').css('display','flex');
-                setTimeout(function(){
-                    $('#notice').css('display','none');
-                },3000);
-            }
-        }
 		$(function() {
-			$("#linkhref").on({
-				touchstart: function(e) {
-					timeOutEvent = setTimeout("selectElementText()", 500);
-					e.preventDefault();
-				},
-				touchmove: function() {
-					clearTimeout(timeOutEvent);
-					timeOutEvent = 0;
-				},
-				touchend: function() {
-					clearTimeout(timeOutEvent);
-					if (timeOutEvent != 0) {
-						jump();
-					}
-					return false;
-				},
-                mousedown: function(e) {
-					timeOutEvent = setTimeout("selectElementText()", 500);
-					e.preventDefault();
-				},
-				mousemove: function() {
-					clearTimeout(timeOutEvent);
-					timeOutEvent = 0;
-				},
-				mouseup: function() {
-					clearTimeout(timeOutEvent);
-					if (timeOutEvent != 0) {
-						jump();
-					}
-					return false;
-				},
-			})
+			if(isMQQ() || isWechat()){
+                location.href = '//cn.bing.com';
+            }
 		});
-        function selectElementText() {
-			timeOutEvent = 0;
-            $('#linkhref').addClass('selected');
-            $('#copy').show();
-        }
-        var clipboard = new ClipboardJS('#copy');
-        clipboard.on('success', function(e) {
-            $('#linkhref').removeClass('selected');
-            $('#copy').hide();
-            alert('已复制，请在浏览器地址栏粘贴打开' );
-            e.clearSelection();
-        });
     </script>
 </body>
 </html>
